@@ -15,7 +15,7 @@ Napisz klasę `Tagliatelle`, która posiada:
 Napisz klasę `Makaron`, która posiada publiczną, czysto wirtualną (abstrakcyjną) metodę `double ileMaki(unsigned)`. Zmodyfikuj `Tagliatelle` tak, aby klasa ta dziedziczyła publicznie po `Makaron` i nadpisywała odpowiednią metodę. Następnie napisz klasę `Penne`, która także dziedziczy publicznie po `Makaron` oraz nadpisuje `ileMaki` tak, aby metoda ta zwracała po prostu podaną wartość (skonwertowaną na typ `double`). Dodaj do klasy `Makaron` publiczną statyczną metodę `gotujMakaron`, która:
 - przyjmuje przez stałą referencję jeden argument typu `std::string`
 - zwraca wskaźnik do obiektu typu `Makaron`
-- jeżeli pierwszy i ostatni znak argumentu są takie same, dynamicznie alokuje pod zwracanym adresem obiekt typu `Tagliatelle` z polami o wartościach `L == 3.14`, `W == 0.42`, `R = 0.1`
+- jeżeli pierwszy i ostatni znak argumentu są takie same, dynamicznie alokuje pod zwracanym adresem obiekt typu `Tagliatelle` z polami o wartościach `L == 3.14`, `W == 0.42`, `R == 0.1`
 - jeżeli pierwszy i ostatni znak argumentu są inne, dynamicznie alokuje pod zwracanym adresem obiekt typu `Penne` (użyj wygenerowanego przez kompilator konstruktora domyślnego).
 
 Na koniec dokonaj modyfikacji klasy `Makaron` potrzebnej do poprawnego usuwania obiektów klas `Tagliatelle` i `Penne` przez wskaźnik na obiekt `Makaron`.
