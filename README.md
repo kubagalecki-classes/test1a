@@ -7,7 +7,7 @@ Napisz klasę `Tagliatelle`, która posiada:
 - prywatne pole `double W`, reprezentujące szerokość kawałka makaronu
 - prywatne pole `double R`, reprezentujące proporcję jajek do mąki
 - prywatne statyczne pole `const double C`, reprezentujące pewną stałą. Nie definiuj jego wartości, a jedynie je zadeklaruj (definicja znajdzie się w kodzie z testami).
-- publiczny konstruktor parametryczny `Tagliatelle(double, double, double)`, nadający polom odpowiednie wartości przy pomocy listy inicjalizacyjnej
+- publiczny konstruktor parametryczny `Tagliatelle(double, double, double) const`, nadający polom odpowiednie wartości przy pomocy listy inicjalizacyjnej
 - publiczny konstruktor domyślny nadający wszystkim trzem polom wartość `0.5`.
 - publiczną metodę `double ileMaki(unsigned P)` zwracającą masę mąki potrzebną do przygotowania liczby porcji równej argumentowi metody, zgodnie ze wzrorem `P * L * W * (1. - R) * C`
 
@@ -19,8 +19,6 @@ Napisz klasę `Makaron`, która posiada publiczną, czysto wirtualną (abstrakcy
 - jeżeli pierwszy i ostatni znak argumentu są inne, dynamicznie alokuje pod zwracanym adresem obiekt typu `Penne` (użyj wygenerowanego przez kompilator konstruktora domyślnego).
 
 Na koniec dokonaj modyfikacji klasy `Makaron` potrzebnej do poprawnego usuwania obiektów klas `Tagliatelle` i `Penne` przez wskaźnik na obiekt `Makaron`.
-
-**Uwaga**: Możesz użyć zwykłego wskaźnika lub klasy `std::unique_ptr`, w zależności od swojej preferencji.
 
 **Podpowiedź:** Klasa `std::string` posiada metody `front` i `back`, służące do dostępu do odpowiednio pierwszego i ostatniego znaku.
 
