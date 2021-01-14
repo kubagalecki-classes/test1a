@@ -12,7 +12,7 @@ Napisz klasę `Tagliatelle`, która posiada:
 - publiczną metodę `double ileMaki(unsigned P) const` zwracającą masę mąki potrzebną do przygotowania liczby porcji równej argumentowi metody, zgodnie ze wzrorem `P * L * W * (1. - R) * C`
 
 ## Zadanie 2
-Napisz klasę `Makaron`, która posiada publiczną, czysto wirtualną (abstrakcyjną) metodę `double ileMaki(unsigned)`. Zmodyfikuj `Tagliatelle` tak, aby klasa ta dziedziczyła publicznie po `Makaron` i nadpisywała odpowiednią metodę. Następnie napisz klasę `Penne`, która także dziedziczy publicznie po `Makaron` oraz nadpisuje `ileMaki` tak, aby metoda ta zwracała po prostu podaną wartość (skonwertowaną na typ `double`). Dodaj do klasy `Makaron` publiczną statyczną metodę `gotujMakaron`, która:
+Napisz klasę `Makaron`, która posiada publiczną, czysto wirtualną (abstrakcyjną) metodę `double ileMaki(unsigned) const`. Zmodyfikuj `Tagliatelle` tak, aby klasa ta dziedziczyła publicznie po `Makaron` i nadpisywała odpowiednią metodę. Następnie napisz klasę `Penne`, która także dziedziczy publicznie po `Makaron` oraz nadpisuje `ileMaki` tak, aby metoda ta zwracała po prostu podaną wartość (skonwertowaną na typ `double`). Dodaj do klasy `Makaron` publiczną statyczną metodę `gotujMakaron`, która:
 - przyjmuje przez stałą referencję jeden argument typu `std::string`
 - zwraca wskaźnik do obiektu typu `Makaron`
 - jeżeli pierwszy i ostatni znak argumentu są takie same, dynamicznie alokuje pod zwracanym adresem obiekt typu `Tagliatelle` z polami o wartościach `L == 3.14`, `W == 0.42`, `R == 0.1`
