@@ -7,9 +7,9 @@ Napisz klasę `Tagliatelle`, która posiada:
 - prywatne pole `double W`, reprezentujące szerokość kawałka makaronu
 - prywatne pole `double R`, reprezentujące proporcję jajek do mąki
 - prywatne statyczne pole `const double C`, reprezentujące pewną stałą. Nie definiuj jego wartości, a jedynie je zadeklaruj (definicja znajdzie się w kodzie z testami).
-- publiczny konstruktor parametryczny `Tagliatelle(double, double, double) const`, nadający polom odpowiednie wartości przy pomocy listy inicjalizacyjnej
+- publiczny konstruktor parametryczny `Tagliatelle(double, double, double)`, nadający polom odpowiednie wartości przy pomocy listy inicjalizacyjnej
 - publiczny konstruktor domyślny nadający wszystkim trzem polom wartość `0.5`.
-- publiczną metodę `double ileMaki(unsigned P)` zwracającą masę mąki potrzebną do przygotowania liczby porcji równej argumentowi metody, zgodnie ze wzrorem `P * L * W * (1. - R) * C`
+- publiczną metodę `double ileMaki(unsigned P) const` zwracającą masę mąki potrzebną do przygotowania liczby porcji równej argumentowi metody, zgodnie ze wzrorem `P * L * W * (1. - R) * C`
 
 ## Zadanie 2
 Napisz klasę `Makaron`, która posiada publiczną, czysto wirtualną (abstrakcyjną) metodę `double ileMaki(unsigned)`. Zmodyfikuj `Tagliatelle` tak, aby klasa ta dziedziczyła publicznie po `Makaron` i nadpisywała odpowiednią metodę. Następnie napisz klasę `Penne`, która także dziedziczy publicznie po `Makaron` oraz nadpisuje `ileMaki` tak, aby metoda ta zwracała po prostu podaną wartość (skonwertowaną na typ `double`). Dodaj do klasy `Makaron` publiczną statyczną metodę `gotujMakaron`, która:
